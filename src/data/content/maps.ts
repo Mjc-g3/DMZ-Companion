@@ -13,6 +13,13 @@ export const maps: GameMap[] = [
       height: 2048,
       isPlaceholder: true,
     },
+    // Linked, not copied: the official map and its data belong to Activision.
+    links: [
+      {
+        label: "Official Hajin map on callofduty.com",
+        url: "https://www.callofduty.com/guides/modernwarfare4/dmz-maps/hajin",
+      },
+    ],
     meta: {
       verification: "unverified",
       sources: [{ label: "Project brief (map name only)" }],

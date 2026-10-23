@@ -3,11 +3,12 @@
 import dynamic from "next/dynamic";
 import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
-import { Layers, Map as MapIcon, MapPin, TriangleAlert } from "lucide-react";
+import { ExternalLink, Layers, Map as MapIcon, MapPin, TriangleAlert } from "lucide-react";
 
 import { SearchInput } from "@/components/common/search-input";
 import { EmptyState } from "@/components/common/states";
 import { VerificationBadge } from "@/components/common/verification-badge";
+import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -107,6 +108,22 @@ export function MapView() {
             </Select>
           )}
         </div>
+
+        {map.links.length > 0 && (
+          <ul className="flex flex-col gap-1.5">
+            {map.links.map((link) => (
+              <li key={link.url}>
+                <Button asChild variant="outline" size="sm" className="h-auto w-full justify-between py-2 text-left whitespace-normal">
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    {link.label}
+                    <ExternalLink aria-hidden />
+                    <span className="sr-only">(opens in a new tab)</span>
+                  </a>
+                </Button>
+              </li>
+            ))}
+          </ul>
+        )}
 
         {selected && <SelectedLocation id={selected.id} onClose={() => setSelectedId(null)} />}
 

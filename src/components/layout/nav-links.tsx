@@ -22,7 +22,7 @@ export function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
                 aria-current={active ? "page" : undefined}
                 className={cn(
                   "group text-sidebar-foreground/80 hover:bg-sidebar-accent hover:text-sidebar-foreground focus-visible:ring-ring/50 flex items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors outline-none focus-visible:ring-[3px]",
-                  active && "bg-sidebar-accent text-sidebar-foreground font-medium",
+                  active && "bg-sidebar-accent text-sidebar-foreground font-medium shadow-[inset_3px_0_0_var(--primary)]",
                 )}
               >
                 <Icon

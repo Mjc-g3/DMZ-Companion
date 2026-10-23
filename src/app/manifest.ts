@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Unofficial second-screen companion for MW4 DMZ.",
     start_url: "/",
     display: "standalone",
-    background_color: "#1a1d17",
-    theme_color: "#1a1d17",
+    background_color: "#050505",
+    theme_color: "#050505",
     icons: [
       { src: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
       { src: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },

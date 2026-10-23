@@ -15,11 +15,18 @@ export interface MapImage {
   attribution?: string;
 }
 
+export interface ExternalLink {
+  label: string;
+  url: string;
+}
+
 export interface GameMap extends Versioned {
   id: EntityId;
   name: string;
   description?: string;
   image: MapImage;
+  /** Links to official or community resources, opened in a new tab. */
+  links: ExternalLink[];
 }
 
 export const LOCATION_KINDS = [

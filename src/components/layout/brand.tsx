@@ -2,13 +2,17 @@ import { Crosshair } from "lucide-react";
 
 export function Brand() {
   return (
-    <div className="flex items-center gap-2">
-      <span className="bg-primary/15 text-primary grid size-8 place-items-center rounded-md">
-        <Crosshair className="size-4" aria-hidden />
+    <div className="flex items-center gap-2.5">
+      <span className="bg-primary text-primary-foreground grid size-8 place-items-center rounded-sm">
+        <Crosshair className="size-4" strokeWidth={2.5} aria-hidden />
       </span>
-      <span className="leading-tight">
-        <span className="block text-sm font-semibold tracking-wide uppercase">DMZ Companion</span>
-        <span className="text-muted-foreground block text-[11px]">Unofficial · MW4</span>
+      <span className="leading-none">
+        <span className="block text-base font-black tracking-tight uppercase italic">
+          DMZ <span className="text-primary">Companion</span>
+        </span>
+        <span className="text-muted-foreground mt-1 block text-[10px] tracking-[0.2em] uppercase">
+          Unofficial · MW4
+        </span>
       </span>
     </div>
   );

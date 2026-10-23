@@ -21,6 +21,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-dvh">
+      {/* Signature yellow rule across the top, as on the MW4 key art. */}
+      <div aria-hidden className="bg-primary fixed inset-x-0 top-0 z-[1100] h-[3px]" />
       <a
         href="#main"
         className="bg-primary text-primary-foreground sr-only z-[1300] rounded-md px-3 py-2 focus:not-sr-only focus:fixed focus:top-2 focus:left-2"
@@ -29,7 +31,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </a>
 
       {/* Desktop sidebar */}
-      <aside className="bg-sidebar border-sidebar-border sticky top-0 hidden h-dvh w-60 shrink-0 flex-col gap-6 border-r p-3 md:flex">
+      <aside className="bg-sidebar border-sidebar-border sticky top-0 hidden h-dvh w-60 pt-4 shrink-0 flex-col gap-6 border-r p-3 md:flex">
         <div className="px-2 pt-1">
           <Brand />
         </div>
@@ -41,7 +43,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
       <div className="flex min-w-0 flex-1 flex-col">
         {/* Mobile top bar */}
-        <header className="bg-sidebar/95 border-sidebar-border sticky top-0 z-[1050] flex h-14 items-center gap-2 border-b px-3 backdrop-blur md:hidden">
+        <header className="bg-sidebar/95 border-sidebar-border sticky top-0 z-[1050] flex h-14 pt-[3px] items-center gap-2 border-b px-3 backdrop-blur md:hidden">
           <Button
             variant="ghost"
             size="icon"

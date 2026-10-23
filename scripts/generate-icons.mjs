@@ -11,7 +11,7 @@ for (const size of [192, 512]) {
 }
 // Maskable icons need the artwork inside the central safe zone.
 const inner = await sharp(svg).resize(360, 360).png().toBuffer();
-await sharp({ create: { width: 512, height: 512, channels: 4, background: "#1a1d17" } })
+await sharp({ create: { width: 512, height: 512, channels: 4, background: "#050505" } })
   .composite([{ input: inner, gravity: "center" }])
   .png()
   .toFile(new URL("icon-maskable-512.png", out).pathname);
